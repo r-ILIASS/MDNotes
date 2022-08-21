@@ -27,7 +27,7 @@ const User = mongoose.model("User", userSchema);
 export { User };
 ```
 
-<mark style="color:black;font-weight:bold;font-size:18px;">Built-in or custom validation only run Model.prototype.save() and Model.prototype.creat(), so it's always recommended to use Model.save() or model.create() and avoid Model.findOneAndUpdate() for example as they skip mongoose validation</mark>
+> **Built-in or custom validation only run Model.prototype.save() and Model.prototype.creat(), so it's always recommended to use Model.save() or model.create() and avoid Model.findOneAndUpdate() for example as they skip mongoose validation**
 
 ## Schema Methods/Virtuals
 

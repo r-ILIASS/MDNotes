@@ -11,3 +11,9 @@
 - Every time the api is accessed, the access token is sent with the request, **when the access token expires the refresh token is used to request a new access token**, the refresh token is verified with its own endpoint and compared to data in the database, it needs to expire or be removed during a manual logout.
 
 > If the refresh token was compromised, malicious access would be granted until the refresh token expires, and this brings us back to refresh token rotation, with refresh token rotation every time a new access token is issued a new refresh token is also issued, this doesn't eliminate the risk but it does greatly reduce it.
+
+## Combining refresh tokens with reuse detection
+
+- A refresh token can only be used once.
+
+- If reuse is detected, all refresh tokens are invalidated for the user, which will force a new login for authentication.
